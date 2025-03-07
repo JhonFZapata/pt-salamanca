@@ -1,4 +1,4 @@
-# Sistema de Gestión de Inventario y ventas para Cafetería
+# Sistema de Gestión de Inventario y Ventas para Cafetería
 
 Este es un sistema de gestión de inventario desarrollado en PHP usando el patrón MVC (Modelo-Vista-Controlador). Permite gestionar productos, realizar ventas y actualizar el stock de los productos.
 
@@ -22,7 +22,7 @@ Este es un sistema de gestión de inventario desarrollado en PHP usando el patr�
 ### **1. Base de Datos**
 
 #### **Crear la Base de Datos**
-Crea una base de datos llamada db_pt_salamanca y ejecuta las siguientes sentencias SQL en tu servidor de SQL Server para crear las tablas necesarias:
+Crea una base de datos llamada `db_pt_salamanca` y ejecuta las siguientes sentencias SQL en tu servidor de SQL Server para crear las tablas necesarias:
 
 ```sql
 -- Tabla de Categorías
@@ -53,16 +53,30 @@ CREATE TABLE ventas (
     fecha_venta DATE NOT NULL,
     FOREIGN KEY (producto_id) REFERENCES productos(id)
 );
+```
 
-### **2. Insertar rgistros iniciales**
+#### **Insertar Registros Iniciales**
+Ejecuta las siguientes sentencias SQL para insertar categorías de productos iniciales:
+
+```sql
 -- Insertar categorías de productos
 INSERT INTO categorias (nombre) VALUES
 ('Bebidas Calientes'),
 ('Bebidas Frías'),
 ('Postres');
+```
 
-### **3. Levantar servidor de desarrollo**
+### **2. Levantar Servidor de Desarrollo**
+Ejecuta el siguiente comando para levantar el servidor de desarrollo:
+
+```bash
 php -S localhost:8000
+```
 
-### **4. Abre la url activa**
+### **3. Abre la URL Activa**
+Accede a la aplicación desde tu navegador usando la siguiente URL:
+
+```
 http://localhost:8000
+```
+```
